@@ -35,5 +35,12 @@ FROM employees emp
 WHERE emp.Salary > ch.Salary;
 
 
+-- Задание 2
+SELECT e.Department, COUNT(*) AS num_of_employees
+FROM employees e
+GROUP BY e.Department
+HAVING COUNT(*) <= 3;
+
+
 
 
