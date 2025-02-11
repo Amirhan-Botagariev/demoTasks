@@ -23,11 +23,12 @@ INSERT INTO EMPLOYEES (EmployeeId, ChiefId, Department, Name, Salary) VALUES
 
 -- Задание 1
 SELECT
-    emp.EmployeeId,
-    ch.EmployeeId,
+    emp.EmployeeId AS EmployeeID,
+    emp.Name AS EmployeeName,
     emp.Department,
-    emp.Name,
-    emp.Salary
+    emp.Salary AS EmployeeSalary,
+    ch.Name AS ChiefName,
+    ch.Salary AS ChiefSalary
 FROM employees emp
          JOIN employees ch
               ON emp.ChiefId = ch.EmployeeId
