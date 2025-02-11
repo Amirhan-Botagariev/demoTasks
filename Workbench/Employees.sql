@@ -21,6 +21,18 @@ INSERT INTO EMPLOYEES (EmployeeId, ChiefId, Department, Name, Salary) VALUES
     (6, 8, 'QA', 'Торгын', 300),
     (7, 8, 'QA', 'Айжан', 200);
 
+-- Задание 1
+SELECT
+    emp.EmployeeId,
+    ch.EmployeeId,
+    emp.Department,
+    emp.Name,
+    emp.Salary
+FROM employees emp
+         JOIN employees ch
+              ON emp.ChiefId = ch.EmployeeId
+WHERE emp.Salary > ch.Salary;
+
 
 
 
